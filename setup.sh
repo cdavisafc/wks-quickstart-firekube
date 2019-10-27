@@ -166,6 +166,7 @@ log "Installing Kubernetes cluster"
 apply_args=(
   "--git-url=$(git_http_url "$(git_remote_fetchurl "${git_remote}")")"
   "--git-branch=$(git_current_branch)"
+  "--ssh-key=./cluster-key"
 )
 [ "${git_deploy_key}" ] && apply_args+=("${git_deploy_key}")
 wksctl apply "${apply_args[@]}"
