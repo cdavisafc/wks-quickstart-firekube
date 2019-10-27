@@ -21,6 +21,8 @@ machines:
       hostPort: 30443
     - containerPort: 30080
       hostPort: 30080
+    - containerPort: 9090
+      hostPort: 9090
     privileged: true
     volumes:
     - destination: /var/lib/docker
