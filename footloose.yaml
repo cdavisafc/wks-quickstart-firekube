@@ -2,7 +2,7 @@ cluster:
   name: firekube
   privateKey: cluster-key
 machines:
-- count: 2
+- count: 5
   spec:
     backend: docker
     ignite:
@@ -21,6 +21,8 @@ machines:
       hostPort: 30443
     - containerPort: 30080
       hostPort: 30080
+    - containerPort: 9090
+      hostPort: 9090
     privileged: true
     volumes:
     - destination: /var/lib/docker
